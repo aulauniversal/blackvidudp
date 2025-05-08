@@ -1,121 +1,104 @@
-📝 BlackvidUDP - UDP DDoS Attack Tool
-📜 Descripción del Proyecto
+# BlackvidUDP - UDP DDoS Attack Tool
+
+## Descripción del Proyecto
 
 BlackvidUDP es una herramienta avanzada para realizar ataques de Denegación de Servicio Distribuidos (DDoS) sobre el protocolo UDP.
+
 Permite lanzar grandes volúmenes de tráfico hacia IPs o dominios, usando rotación de puertos, paquetes aleatorios o patrones complejos para evadir algunas protecciones básicas.
 
 Incluye:
 
-    Detección automática de dispositivos activos en la red interna (escaneo ARP).
+* Detección automática de dispositivos activos en la red interna (escaneo ARP).
+* Spoofing básico de IP para simular múltiples atacantes.
+* Monitoreo en tiempo real del ataque (CPU, memoria, ancho de banda, paquetes).
+* Control dinámico del ataque (pausar/reanudar/detener).
+* Ajuste automático de hilos basado en el uso de CPU.
+* Registro de resultados en un archivo `attack_summary.log`.
 
-    Spoofing básico de IP para simular múltiples atacantes.
+---
 
-    Monitoreo en tiempo real del ataque (CPU, memoria, ancho de banda, paquetes).
+## Requisitos
 
-    Control dinámico del ataque (pausar/reanudar/detener).
+Antes de usar BlackvidUDP, instala las dependencias ejecutando:
 
-    Ajuste automático de hilos basados en el uso de CPU.
-
-    Registro de resultados en un archivo attack_summary.log.
-
-⚙️ Requisitos
-
-Antes de usar BlackvidUDP, asegúrate de tener instalado:
-
+```
 pip install -r requirements.txt
+```
 
-Dependencias necesarias:
+**Dependencias necesarias:**
 
-    psutil
+* psutil
+* colorama
+* netifaces
+* scapy
+* ifaddr
+* matplotlib (opcional para monitoreo gráfico)
 
-    colorama
+---
 
-    netifaces
+## Instrucciones de Uso
 
-    scapy
+1. Clonar el repositorio:
 
-    ifaddr
-
-    (opcional para gráficos) matplotlib
-   🚀 Instrucciones de uso
-
-    Clonar el repositorio:
-
+```
 git clone https://github.com/tu_usuario/blackvidudp.git
 cd blackvidudp
+```
 
-    Instalar dependencias:
+2. Instalar dependencias:
 
+```
 pip install -r requirements.txt
+```
 
-    Ejecutar el script:
+3. Ejecutar el script:
 
+```
 python BlackvidUDP.py
+```
 
-    Flujo de ejecución:
+4. Flujo de ejecución:
 
-        Al iniciar, el sistema te preguntará si deseas escanear la red local.
+* Escanear la red local o introducir manualmente una IP/Dominio.
+* Configurar:
 
-        Si no quieres escanear, puedes:
+  * Puertos de destino (se pueden rotar aleatoriamente).
+  * Tamaño de paquetes.
+  * Cantidad de envíos.
+  * Tiempo de espera entre paquetes.
+  * Número de hilos.
+* Durante el ataque:
 
-            Introducir un objetivo manualmente (IP/Dominio).
+  * Presiona `p` para pausar o reanudar.
+  * Presiona `s` para detener.
 
-            Cargar una lista de objetivos desde un archivo de texto.
+5. Al finalizar:
 
-        Luego configurará:
+* Se genera el archivo `attack_summary.log` con todas las estadísticas.
 
-            Puertos para atacar (rotando aleatoriamente).
+---
 
-            Tamaño de paquetes.
+## Funcionalidades destacadas
 
-            Cantidad de envíos.
+* Escaneo de red local (ARP Scan).
+* Ataque UDP masivo.
+* IP Spoofing aleatorio.
+* Rotación de puertos.
+* Control en tiempo real.
+* Ajuste automático de hilos.
+* Logging detallado.
+* (Opcional) Monitoreo gráfico de CPU y red.
 
-            Delay entre envíos (segundos).
+---
 
-            Número de hilos (ajustable en función del rendimiento de tu máquina).
+## Advertencia Legal
 
-        Durante el ataque:
+> Este proyecto tiene fines educativos y de pruebas en entornos controlados.
+>
+> El uso de esta herramienta contra sistemas sin autorización previa es ilegal y puede conllevar sanciones penales y civiles graves.
+>
+> El autor no se hace responsable del mal uso de esta herramienta.
 
-            Presiona p para pausar/reanudar.
+---
 
-            Presiona s para detener el ataque completamente.
 
-    Resumen y estadísticas:
-
-        Al finalizar, se genera automáticamente un archivo attack_summary.log con:
-
-            IPs atacadas exitosamente.
-
-            IPs con errores.
-
-            Total de paquetes enviados y fallidos.
-
-            Ancho de banda utilizado.
-
-            Puertos usados y rotados.
-
-📈 Funcionalidades destacadas
-
-    Escaneo de Red Local (ARP Scan)
-
-    Detección de IPs activas
-
-    Ataque UDP masivo
-
-    IP Spoofing aleatorio
-
-    Rotación de puertos en ataque
-
-    Control del ataque en tiempo real
-
-    Ajuste automático de hilos basado en CPU
-
-    Sistema de logging
-
-    (Opcional) Monitorización gráfica en tiempo real
-
-⚠️ Advertencia Legal
-
-    Este proyecto tiene fines educativos y de pruebas en entornos controlados.
-    El uso de esta herramienta contra sistemas sin autorización previa es ilegal y puede conllevar sanciones penales y civiles graves.
-    El autor no se hace responsable del mal uso de esta herramienta. 
