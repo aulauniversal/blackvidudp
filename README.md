@@ -41,7 +41,7 @@ pip install -r requirements.txt
 1. Clonar el repositorio:
 
 ```
-git clone https://github.com/tu_usuario/blackvidudp.git
+git clone https://github.com/aulauniversal/blackvidudp.git
 cd blackvidudp
 ```
 
