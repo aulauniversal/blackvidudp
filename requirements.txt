@@ -1,0 +1,6 @@
+psutil
+colorama
+netifaces
+scapy
+ifaddr
+matplotlib
