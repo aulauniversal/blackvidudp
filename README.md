@@ -1,5 +1,104 @@
 # BlackvidUDP - UDP DDoS Attack Tool
 
+## Project Description
+
+BlackvidUDP is an advanced tool for performing Distributed Denial of Service (DDoS) attacks over the UDP protocol.
+
+It allows launching large volumes of traffic to IPs or domains, using port rotation, random packets, or complex patterns to evade basic protections.
+
+Includes:
+
+* Automatic detection of active devices on the internal network (ARP scanning).
+* Basic IP spoofing to simulate multiple attackers.
+* Real-time attack monitoring (CPU, memory, bandwidth, packets).
+* Dynamic attack control (pause/resume/stop).
+* Automatic thread adjustment based on CPU usage.
+* Logging results to an `attack_summary.log` file.
+
+---
+
+## Requirements
+
+Before using BlackvidUDP, install the dependencies by running:
+
+```
+pip install -r requirements.txt
+```
+
+**Required dependencies:**
+
+* psutil
+* colorama
+* netifaces
+* scapy
+* ifaddr
+* matplotlib (optional for graphical monitoring)
+
+---
+
+## Instructions for Use
+
+1. Clone the repository:
+
+```
+git clone https://github.com/aulauniversal/blackvidudp.git
+cd blackvidudp
+```
+
+2. Install dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+3. Run the script:
+
+```
+python BlackvidUDP.py
+```
+
+4. Execution flow:
+
+* Scan the local network or manually enter an IP/Domain.
+* Configure:
+
+* Destination ports (can be randomly rotated).
+* Packet size.
+* Number of sends.
+* Timeout between packets.
+* Number of threads.
+* During the attack:
+
+* Press `p` to pause or resume.
+* Press `s` to stop.
+
+5. Upon completion:
+
+* The `attack_summary.log` file is generated with all statistics.
+
+---
+
+## Feature Highlights
+
+* Local network scan (ARP scan).
+* Mass UDP attack.
+* Random IP spoofing.
+* Port rotation.
+* Real-time monitoring.
+* Automatic thread tuning.
+* Detailed logging.
+* (Optional) Graphical CPU and network monitoring.
+
+---
+
+## Legal Disclaimer
+
+> This project is for educational purposes and testing in controlled environments. >
+> Using this tool against systems without prior authorization is illegal and may result in severe criminal and civil penalties.
+>
+> The author is not responsible for any misuse of this tool.
+# BlackvidUDP - UDP DDoS Attack Tool
+
 ## Descripción del Proyecto
 
 BlackvidUDP es una herramienta avanzada para realizar ataques de Denegación de Servicio Distribuidos (DDoS) sobre el protocolo UDP.
