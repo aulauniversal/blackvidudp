@@ -54,7 +54,7 @@ pip install -r requirements.txt
 3. Run the script:
 
 ```
-python BlackvidUDP.py
+sudo python BlackvidUDP.py
 ```
 
 4. Execution flow:
@@ -153,7 +153,7 @@ pip install -r requirements.txt
 3. Ejecutar el script:
 
 ```
-python BlackvidUDP.py
+sudo python BlackvidUDP.py
 ```
 
 4. Flujo de ejecución:
